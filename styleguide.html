@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Styleguide · 풍담</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    /* 견본 페이지 전용 */
+    .sg-block { padding-block: 64px; border-top: 1px solid var(--color-border); }
+    .sg-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .sg-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 16px; }
+    .sg-swatch span { display: block; height: 64px; border-radius: var(--radius-card); border: 1px solid var(--color-border); margin-bottom: 8px; }
+    .sg-stack > * + * { margin-top: 16px; }
+    .sg-narrow { max-width: 640px; }
+  </style>
+</head>
+<body data-page="styleguide">
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header id="site-header"></header>
+
+  <main id="main" class="container" style="padding-block: 80px;">
+    <div class="section-head">
+      <span class="eyebrow">Styleguide</span>
+      <h1 class="h1">풍담 컴포넌트 견본</h1>
+      <p class="lead">개발 확인용 페이지예요. 시연 전에는 링크를 숨깁니다.</p>
+    </div>
+
+    <!-- Color -->
+    <section class="sg-block">
+      <h2 class="h3" style="margin-bottom:24px">Color</h2>
+      <div class="sg-swatches">
+        <div class="sg-swatch caption"><span style="background:var(--color-bg)"></span>bg #FFFFFF</div>
+        <div class="sg-swatch caption"><span style="background:var(--color-surface-alt)"></span>surface-alt #F8F7F4</div>
+        <div class="sg-swatch caption"><span style="background:var(--color-border)"></span>border #E4E0D7</div>
+        <div class="sg-swatch caption"><span style="background:var(--color-text)"></span>먹 text #1F2320</div>
+        <div class="sg-swatch caption"><span style="background:var(--color-text-sub)"></span>text-sub #5B5F58</div>
+        <div class="sg-swatch caption"><span style="background:var(--color-primary)"></span>송록 #2F5D50</div>
+        <div class="sg-swatch caption"><span style="background:var(--color-primary-tint)"></span>송록 틴트 #E2EBE6</div>
+        <div class="sg-swatch caption"><span style="background:var(--color-celadon)"></span>청자 #9DB8AA</div>
+        <div class="sg-swatch caption"><span style="background:var(--color-accent)"></span>노을 #C4703C</div>
+        <div class="sg-swatch caption"><span style="background:var(--color-error)"></span>error #A33F36</div>
+      </div>
+      <div class="sg-row" style="margin-top:24px">
+        <span class="season-spring tag tag--season">봄 · 꽃바람</span>
+        <span class="season-summer tag tag--season">여름 · 실바람</span>
+        <span class="season-autumn tag tag--season">가을 · 노을바람</span>
+        <span class="season-winter tag tag--season">겨울 · 솔바람</span>
+      </div>
+    </section>
+
+    <!-- Type -->
+    <section class="sg-block sg-stack sg-narrow">
+      <h2 class="h3">Typography</h2>
+      <span class="eyebrow">Eyebrow · Season · 가을</span>
+      <p class="display">풍담 風談</p>
+      <p class="h1">감각으로 간직하는 여행의 한 조각</p>
+      <p class="h2">가을, 청주에서 뭐 하지?</p>
+      <p class="h3">토성 위로 노을이 내려앉는 계절</p>
+      <p class="lead">같은 장소도 계절이 바뀌면 다른 이야기를 들려줘요. 지금 계절의 청주부터 걸어 보세요.</p>
+      <p>바람이 스칠 때 울리는 맑은 소리와, 그 뒤를 따라 나긋하게 번지는 향. 머무는 자리에 퍼지는 소리와 향이 당신을 다시 그때의 여행길로 데려갑니다.</p>
+      <p class="body-sm">카드 설명과 댓글에 쓰는 작은 본문이에요.</p>
+      <p class="caption">2026.10.14 · 가을 · 청원구</p>
+    </section>
+
+    <!-- Buttons -->
+    <section class="sg-block sg-stack">
+      <h2 class="h3">Button</h2>
+      <div class="sg-row">
+        <button class="btn btn--primary btn--l" type="button">테스트 시작하기</button>
+        <button class="btn btn--primary" type="button">기록 올리기</button>
+        <button class="btn btn--secondary" type="button">장소 보기</button>
+        <button class="btn btn--secondary btn--s" type="button">더 보기</button>
+        <a class="link-arrow" href="#">모두 보기 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="sg-row" id="sg-icons"></div>
+    </section>
+
+    <!-- Chip / Tab / Tag -->
+    <section class="sg-block sg-stack">
+      <h2 class="h3">Chip · Tab · Tag · Badge</h2>
+      <div class="chip-group" data-sg-chips>
+        <button class="chip is-active" type="button">전체</button>
+        <button class="chip" type="button">상당구</button>
+        <button class="chip" type="button">서원구</button>
+        <button class="chip" type="button">흥덕구</button>
+        <button class="chip" type="button">청원구</button>
+      </div>
+      <div class="tabs season-autumn" role="tablist" data-sg-tabs>
+        <button class="tab" type="button" data-season="spring">봄 SPRING</button>
+        <button class="tab" type="button" data-season="summer">여름 SUMMER</button>
+        <button class="tab is-active" type="button" data-season="autumn">가을 AUTUMN</button>
+        <button class="tab" type="button" data-season="winter">겨울 WINTER</button>
+      </div>
+      <div class="sg-row">
+        <span class="tag">역사</span><span class="tag">노을</span>
+        <span class="badge" id="sg-badge">JEONGBUK SUNSET</span>
+        <span class="badge badge--virtual">가상 · 시연용</span>
+      </div>
+    </section>
+
+    <!-- Fields -->
+    <section class="sg-block sg-narrow sg-stack">
+      <h2 class="h3">Input</h2>
+      <label class="field">
+        <span class="field__label">제목</span>
+        <input class="field__input" type="text" placeholder="이웃들에게 당신의 여행을 한 줄로 들려주세요" maxlength="40">
+      </label>
+      <label class="field is-error">
+        <span class="field__label">장소</span>
+        <input class="field__input" type="text" placeholder="장소를 검색해 주세요">
+        <span class="field__error">장소를 골라 주세요</span>
+      </label>
+      <label class="field">
+        <span class="field__label">내용</span>
+        <textarea class="field__input" placeholder="그날의 바람, 소리, 향은 어땠나요?" maxlength="2200"></textarea>
+        <span class="field__meta"><span></span><span class="caption">0/2200</span></span>
+      </label>
+      <div class="field field--search">
+        <span id="sg-search-icon"></span>
+        <input class="field__input" type="search" placeholder="장소, 이웃, 태그로 찾아보기" aria-label="검색">
+      </div>
+      <label class="check"><input type="checkbox" checked> 나도 이곳에 다시 오고 싶어요</label>
+      <div class="upload" style="max-width:280px" id="sg-upload"><strong>사진을 올려 주세요</strong><span class="caption">JPG, PNG · 최대 4장 (시연용)</span></div>
+    </section>
+
+    <!-- Cards -->
+    <section class="sg-block">
+      <h2 class="h3" style="margin-bottom:24px">Card · 장소 (4:5, 3열)</h2>
+      <div class="grid grid--3">
+        <article class="card" id="sg-place">
+          <div class="media media--4x5"><span class="media__ph">정북동토성 · 가을</span></div>
+          <div class="card__body">
+            <span class="card__meta caption">청원구</span>
+            <h3 class="card__title"><a class="card__link" href="#">정북동토성</a></h3>
+            <p class="card__desc">토성 위 소나무 너머로 노을이 내려앉아요.</p>
+            <div class="tag-list"><span class="tag">역사</span><span class="tag">노을</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="media media--4x5"><span class="media__ph">청남대 · 가을</span></div>
+          <div class="card__body">
+            <span class="card__meta caption">상당구</span>
+            <h3 class="card__title"><a class="card__link" href="#">청남대</a></h3>
+            <p class="card__desc">대청호를 끼고 걷는 단풍길.</p>
+            <div class="tag-list"><span class="tag">자연</span><span class="tag">산책</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="media media--4x5"><span class="media__ph">수암골 · 가을</span></div>
+          <div class="card__body">
+            <span class="card__meta caption">상당구</span>
+            <h3 class="card__title"><a class="card__link" href="#">수암골</a></h3>
+            <p class="card__desc">언덕 위에서 노을과 야경을 차례로. 벽화 골목을 지나 전망대에 오르면 청주 시내가 한눈에 보여요.</p>
+            <div class="tag-list"><span class="tag">야경</span><span class="tag">카페</span></div>
+          </div>
+        </article>
+      </div>
+
+      <h2 class="h3" style="margin:64px 0 24px">Card · 기록 / 장소 추천 (4:5, 4열)</h2>
+      <div class="grid grid--4" id="sg-records"></div>
+
+      <h2 class="h3" style="margin:64px 0 24px">Card · 대표 장소 (16:9)</h2>
+      <article class="card card-feature season-autumn">
+        <div class="media media--16x9"><span class="media__ph">정북동토성 노을 · 16:9</span></div>
+        <div class="card-feature__body">
+          <span class="badge" id="sg-badge2">풍담 카드 · JEONGBUK SUNSET</span>
+          <p class="h2">정북동토성</p>
+          <p>토성 위로 노을이 길게 내려앉는 계절</p>
+        </div>
+      </article>
+
+      <h2 class="h3" style="margin:64px 0 24px">Card · 작은 가로형 / 수집</h2>
+      <div class="grid grid--3">
+        <article class="card-row">
+          <div class="media media--1x1"><span class="media__ph">운리단길</span></div>
+          <div><p class="card__title"><a class="card__link" href="#">운리단길</a></p><p class="caption">작은 카페와 소품 가게가 이어지는 골목.</p></div>
+        </article>
+      </div>
+      <div class="sg-row" style="margin-top:32px; align-items:flex-start">
+        <div class="card-collect"><div class="media"><span class="media__ph">SANGDANG SNOW</span></div><p class="caption" style="margin-top:8px">2026.01.12 태그</p></div>
+        <div class="card-collect is-empty"><div class="media"><span class="media__ph">아직 만나지<br>못한 카드</span></div></div>
+      </div>
+    </section>
+
+    <!-- Test -->
+    <section class="sg-block sg-narrow sg-stack">
+      <h2 class="h3">Test option · Progress</h2>
+      <div class="progress" style="--progress:40%"><div class="progress__bar"></div></div>
+      <p class="caption">2 / 5</p>
+      <button class="option" type="button"><span class="option__key">A</span>꽃이 핀 길부터 천천히 걸어 볼래요</button>
+      <button class="option is-selected" type="button"><span class="option__key">C</span>분위기 좋은 카페를 찾아 사진부터 찍어요</button>
+    </section>
+
+    <!-- Reaction · comment -->
+    <section class="sg-block sg-narrow sg-stack">
+      <h2 class="h3">Reaction · Comment</h2>
+      <div class="sg-row" id="sg-reactions"></div>
+      <div>
+        <div class="comment"><span class="avatar">m</span><p><span class="comment__name">min2u15</span><span class="comment__text">우리 또 청주 놀러 가자</span><br><span class="caption">30분 · 답글 달기</span></p><span></span></div>
+        <div class="comment comment--reply"><span class="avatar">k</span><p><span class="comment__name">kidoki.do</span><span class="comment__text">나랑도!!</span><br><span class="caption">43분 · 답글 달기</span></p><span></span></div>
+      </div>
+      <div class="dots"><span></span><span class="is-active"></span><span></span><span></span></div>
+    </section>
+
+    <!-- Feedback -->
+    <section class="sg-block sg-stack">
+      <h2 class="h3">Toast · Modal · Empty</h2>
+      <div class="sg-row">
+        <button class="btn btn--secondary" type="button" data-sg="toast">토스트 보기</button>
+        <button class="btn btn--secondary" type="button" data-sg="modal">확인 모달 보기</button>
+      </div>
+      <div class="empty" id="sg-empty"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script>
+    // 견본 페이지 전용: 아이콘 주입과 데모 동작 (script.js 이후 실행)
+    addEventListener('DOMContentLoaded', () => {
+      const $ = (s) => document.querySelector(s);
+      $('#sg-icons').innerHTML = ['heart', 'sound', 'share', 'left', 'right']
+        .map((n) => `<button class="icon-btn" type="button">${icon(n, n)}</button>`).join('');
+      $('#sg-search-icon').outerHTML = icon('search');
+      $('#sg-upload').insertAdjacentHTML('afterbegin', icon('image'));
+      $('#sg-badge').insertAdjacentHTML('afterbegin', icon('card'));
+      $('#sg-badge2').insertAdjacentHTML('afterbegin', icon('card'));
+      $('#sg-place').insertAdjacentHTML('afterbegin',
+        `<button class="icon-btn card__save" type="button" aria-pressed="false">${icon('heart', '저장')}</button>`);
+
+      const rec = (place, title, user, revisit, cmt, count) => `
+        <article class="card">
+          <div class="media media--4x5"><span class="media__ph">${place}</span>${count ? `<span class="card__count">▢ ${count}</span>` : ''}</div>
+          <div class="card__body">
+            <span class="card__meta caption">${place}</span>
+            <h3 class="card__title"><a class="card__link" href="#">${title}</a></h3>
+            <p class="card__foot"><span class="avatar avatar--s">${user[0]}</span>${user}
+              <span class="card__stat card__stat--revisit">${icon('chime')}${revisit}</span>
+              <span class="card__stat">${icon('comment')}${cmt}</span></p>
+          </div>
+        </article>`;
+      const quote = (text, place, user) => `
+        <article class="card card-quote">
+          <div class="media media--4x5"><span class="card-quote__label">추천</span>
+            <div><p class="card-quote__mark">“</p><p class="card-quote__text">${text}</p></div></div>
+          <div class="card__body">
+            <span class="card__meta caption">${place.split(' · ')[1]}</span>
+            <h3 class="card__title"><a class="card__link" href="#">${place.split(' · ')[0]}</a></h3>
+            <p class="card__foot"><span class="avatar avatar--s">${user[0]}</span>${user}</p>
+          </div>
+        </article>`;
+      $('#sg-records').innerHTML =
+        rec('정북동토성 · 청원구', '해가 지는 20분 동안 아무 말도 안 했다', 'hanul.walk', 41, 6, 3) +
+        quote('비 오는 날 더 좋은 골목', '운리단길 · 흥덕구', 'kidoki.do') +
+        rec('수암골 · 상당구', '전망대에서 본 청주', 'min2u15', 27, 4) +
+        rec('청남대 · 상당구', '단풍길 끝에서 국화 향', 'dal.mood', 33, 5);
+
+      $('#sg-reactions').innerHTML = `
+        <button class="reaction" type="button" aria-pressed="false" data-react>${icon('heart')}좋아요 12</button>
+        <button class="reaction reaction--revisit" type="button" aria-pressed="false" data-react><span class="swing">${icon('chime')}</span>다시 가고 싶어요 18</button>`;
+      $('#sg-empty').innerHTML = `${icon('comment')}<p class="h3" style="color:var(--color-text)">아직 이 조건의 기록이 없어요</p><p>첫 번째 이웃이 되어 주세요.</p><a class="btn btn--primary" href="#">기록하기</a>`;
+
+      // 데모 동작
+      document.querySelectorAll('[data-sg-chips] .chip').forEach((c, _, all) =>
+        c.addEventListener('click', () => all.forEach((x) => x.classList.toggle('is-active', x === c))));
+      const tabs = $('[data-sg-tabs]');
+      tabs.querySelectorAll('.tab').forEach((t, _, all) => t.addEventListener('click', () => {
+        all.forEach((x) => x.classList.toggle('is-active', x === t));
+        tabs.className = 'tabs season-' + t.dataset.season;
+      }));
+      $('.card__save').addEventListener('click', (e) => {
+        const b = e.currentTarget, on = b.classList.toggle('is-saved');
+        b.setAttribute('aria-pressed', on);
+        swingChime(b);
+        toast(on ? '저장한 장소에 담았어요' : '저장을 취소했어요', on ? { label: '보러 가기', href: 'my.html' } : null);
+      });
+      document.querySelectorAll('[data-react]').forEach((b) => b.addEventListener('click', () => {
+        const on = b.classList.toggle('is-on');
+        b.setAttribute('aria-pressed', on);
+        const chime = b.querySelector('.swing');
+        if (on && chime) swingChime(chime);
+      }));
+      $('[data-sg="toast"]').addEventListener('click', () => toast('저장한 장소에 담았어요', { label: '보러 가기', href: 'my.html' }));
+      $('[data-sg="modal"]').addEventListener('click', async () => {
+        const ok = await confirmModal({ title: '이 기록을 지울까요?', message: '지운 기록은 되돌릴 수 없어요.', confirmLabel: '지우기', danger: true });
+        toast(ok ? '기록을 지웠어요' : '취소했어요');
+      });
+    });
+  </script>
+</body>
+</html>

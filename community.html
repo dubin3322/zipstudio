@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>COMMUNITY · 이웃 기록 · 풍담</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="pages/community.js" defer></script>
+</head>
+<body data-page="community">
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header id="site-header"></header>
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <div class="page-head__row">
+          <div>
+            <span class="eyebrow">COMMUNITY</span>
+            <h1 class="h1">이웃 기록</h1>
+            <p class="lead">직접 다녀온 이웃들의 청주. 사진 한 장, 문장 하나가 다음 여행의 단서가 돼요.</p>
+          </div>
+          <a class="btn btn--primary" href="write.html"><span data-icon="pen"></span>기록하기</a>
+        </div>
+        <div class="tabs" role="tablist" aria-label="기록 유형" style="margin-top:40px" data-types></div>
+        <div class="toolbar">
+          <div class="chip-group" role="group" aria-label="계절" data-seasons></div>
+          <span class="toolbar__divider" aria-hidden="true"></span>
+          <div class="chip-group" role="group" aria-label="구" data-districts></div>
+          <div class="toolbar__end">
+            <div class="field field--search" style="flex:1; min-width:220px">
+              <span data-icon="search"></span>
+              <input class="field__input" type="search" placeholder="장소, 이웃, 태그로 찾아보기" aria-label="기록 검색" data-search>
+            </div>
+            <select class="select" aria-label="정렬" data-sort>
+              <option value="latest">최신순</option>
+              <option value="revisit">다시 가고 싶어요 많은 순</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container" style="padding-bottom:var(--space-section)">
+      <p class="count" data-count aria-live="polite"></p>
+      <div class="grid grid--4" style="margin-top:20px" data-grid></div>
+      <div class="more" data-more-wrap><button class="btn btn--secondary" type="button" data-more>기록 더 보기</button></div>
+    </section>
+    <a class="fab" href="write.html" aria-label="기록하기"><span data-icon="pen"></span></a>
+  </main>
+  <footer id="site-footer"></footer>
+</body>
+</html>

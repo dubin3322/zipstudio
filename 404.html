@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>찾는 바람이 여기엔 없어요 · 풍담</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="404">
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header id="site-header"></header>
+  <main id="main" class="container notfound">
+    <div class="swing is-swinging" style="width:48px; height:154px" data-chime404></div>
+    <span class="eyebrow">404</span>
+    <h1 class="h2">찾는 바람이 여기엔 없어요</h1>
+    <p class="lead">주소가 바뀌었거나 사라진 페이지예요.</p>
+    <p style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:16px">
+      <a class="btn btn--primary" href="index.html">처음으로</a>
+      <a class="btn btn--secondary" href="places.html">PLACES 둘러보기</a>
+    </p>
+  </main>
+  <script>addEventListener('DOMContentLoaded', () => { document.querySelector('[data-chime404]').innerHTML = chimeSvg(); });</script>
+  <footer id="site-footer"></footer>
+</body>
+</html>

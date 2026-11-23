@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>풍담 風談 · 감각으로 간직하는 여행의 한 조각</title>
+  <meta name="description" content="청주의 상징을 담은 도자 풍경, 풍담. 풍경을 시작으로 청주를 기록하고 다시 연결합니다.">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="pages/home.js" defer></script>
+</head>
+<body data-page="home" data-hero>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+
+    <!-- H1 Hero: 사진 한 장. 아무 곳이나 누르면 풍경 소리 -->
+    <section class="hero" aria-labelledby="hero-title" data-hero-area>
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/images/brand/hero-window.jpg">
+        <img class="hero__bg" src="assets/images/brand/hero-wide.jpg" alt="빛과 나뭇가지 그림자가 드리운 흰 벽 앞에 걸린 풍담 도자 풍경" onerror="this.remove()">
+      </picture>
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <span class="eyebrow eyebrow--ko">청주를 담은 풍경</span>
+          <h1 class="hero__title" id="hero-title"><span class="display">풍담</span><span class="hero__han">風談</span></h1>
+          <p class="hero__lead">감각으로 간직하는 여행의 한 조각</p>
+          <button class="hero__sound" type="button" data-sound-toggle aria-pressed="false"></button>
+        </div>
+        <span class="hero__index" aria-hidden="true">CHEONGJU · 2026</span>
+      </div>
+    </section>
+
+    <!-- H2 한 문장 -->
+    <section class="section">
+      <div class="container statement">
+        <div class="statement__text" data-reveal>
+          <span class="eyebrow">風談</span>
+          <h2 class="h2">눈으로 담았던 풍경을 넘어,<br>감각으로 간직하는 여행의 한 조각.</h2>
+          <p class="body">바람이 스칠 때 울리는 맑은 소리와 그 뒤를 따라 번지는 향이, 당신을 다시 그때의 여행길로 데려갑니다.</p>
+          <ol class="senses">
+            <li><span>01</span>보다</li>
+            <li><span>02</span>듣다</li>
+            <li><span>03</span>맡다</li>
+            <li><span>04</span>기록하다</li>
+          </ol>
+          <p style="margin-top:40px"><a class="link-arrow" href="about.html">풍담 이야기 <span data-icon="arrow"></span></a></p>
+        </div>
+        <div class="statement__media" data-reveal>
+          <div class="media media--card">
+            <span class="media__ph" aria-hidden="true">풍담 풍경</span>
+            <img src="assets/images/brand/chime-studio.jpg" alt="흰 도자 종, 백목련 장식, 정북 노을 카드로 이어진 풍담 풍경" loading="lazy" onerror="this.remove()">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- H3 이번 계절 청주 -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-bar" data-reveal>
+          <div>
+            <span class="eyebrow" data-season-label>AUTUMN</span>
+            <h2 class="h2" data-season-title>가을의 청주</h2>
+          </div>
+          <a class="link-arrow" href="places.html?season=autumn" data-season-link>장소 모두 보기 <span data-icon="arrow"></span></a>
+        </div>
+        <div class="picks" data-home-places></div>
+      </div>
+    </section>
+
+    <!-- H4 여행 테스트 -->
+    <section class="band" aria-labelledby="test-title">
+      <img class="band__bg" src="assets/images/places/musimcheon-2.jpg" alt="" loading="lazy" onerror="this.remove()">
+      <div class="band__content container" data-reveal>
+        <span class="eyebrow">TEST</span>
+        <h2 class="h2" id="test-title">나에게 맞는 청주는 어디일까요?</h2>
+        <a class="btn btn--light" href="test.html">테스트 시작하기</a><span class="band__meta">다섯 가지 질문 · 약 1분</span>
+      </div>
+    </section>
+
+    <!-- H5 이웃 기록 -->
+    <section class="section">
+      <div class="container">
+        <div class="section-bar" data-reveal>
+          <div>
+            <span class="eyebrow">COMMUNITY</span>
+            <h2 class="h2">이웃들이 남긴 청주</h2>
+          </div>
+          <div style="display:flex; gap:32px">
+            <a class="link-arrow" href="write.html">나도 기록하기</a>
+            <a class="link-arrow" href="community.html">기록 더 보기 <span data-icon="arrow"></span></a>
+          </div>
+        </div>
+        <div class="grid grid--records" data-home-records></div>
+      </div>
+    </section>
+
+    <!-- H6 풍경과 카드 -->
+    <section class="section" style="padding-top:0">
+      <div class="container object">
+        <div class="object__main" data-reveal>
+          <div class="media media--4x5">
+            <span class="media__ph" aria-hidden="true">풍담 풍경과 카드</span>
+            <img src="assets/images/brand/package-flat.jpg" alt="회색 바탕 위에 놓인 풍담 풍경과 정북 노을 카드" loading="lazy" onerror="this.remove()">
+          </div>
+        </div>
+        <div class="object__sub" data-reveal>
+          <div class="media media--1x1">
+            <span class="media__ph" aria-hidden="true">카드에 휴대폰 대기</span>
+            <img src="assets/images/brand/nfc-tap.jpg" alt="풍경에 달린 카드에 휴대폰을 가까이 대 NFC가 연결된 모습" loading="lazy" onerror="this.remove()">
+          </div>
+        </div>
+        <div class="object__text" data-reveal>
+          <span class="eyebrow">OBJECT</span>
+          <h2 class="h2" style="margin-top:20px">청주의 기억을 거는 풍경</h2>
+          <p class="body">도자 종과 백목련 장식, 그리고 청주의 장소를 담은 카드 한 장. 카드에 휴대폰을 가까이 대면 그 장소의 이야기가 다시 열립니다.</p>
+          <div class="card-list" data-home-cards></div>
+          <div class="object__links">
+            <a class="link-arrow" href="about.html#wind">풍경 소리 들어 보기 <span data-icon="arrow"></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-label="마무리 문장" style="padding-top:0">
+      <p data-reveal>바람이 불 때마다, 다시 청주.</p>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

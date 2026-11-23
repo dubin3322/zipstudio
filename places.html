@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PLACES · 계절마다 다른 청주 · 풍담</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="pages/places.js" defer></script>
+</head>
+<body data-page="places">
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header id="site-header"></header>
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">PLACES</span>
+        <h1 class="h1">계절마다 다른 청주</h1>
+        <p class="season-line" data-season-line></p>
+      </div>
+    </section>
+    <section class="container" style="padding-bottom:var(--space-section)">
+      <div class="tabs" role="tablist" aria-label="계절" data-season-tabs></div>
+      <div class="places-filter" style="margin-top:16px">
+        <div class="chip-group" role="group" aria-label="구 선택" data-districts></div>
+        <span class="count" data-count aria-live="polite"></span>
+      </div>
+      <ol class="plist" data-list></ol>
+
+      <div style="margin-top:var(--space-section)">
+        <div class="showroom" data-reveal>
+          <div>
+            <p class="h3">풍담을 직접 만나는 곳 <span class="badge badge--virtual" style="margin-left:8px; vertical-align:2px">가상 · 시연용</span></p>
+            <p class="body-sm" style="color:var(--color-text-sub); margin-top:4px">운리단길의 작은 쇼룸에서 풍경 소리를 듣고, 네 장의 카드 향을 맡아 보세요.</p>
+          </div>
+          <a class="link-arrow" href="place.html?id=poongdam-showroom">쇼룸 보기 <span data-icon="arrow"></span></a>
+        </div>
+        <div class="showroom" data-reveal>
+          <div>
+            <p class="h3">어디로 갈지 모르겠다면</p>
+            <p class="body-sm" style="color:var(--color-text-sub); margin-top:4px">다섯 가지 질문으로 당신에게 맞는 청주를 찾아 드릴게요.</p>
+          </div>
+          <a class="link-arrow" href="test.html">TEST 시작하기 <span data-icon="arrow"></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+</body>
+</html>
