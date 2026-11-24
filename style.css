@@ -496,9 +496,9 @@ textarea.field__input:focus { border-color: var(--color-ink); box-shadow: none; 
 .object__links { display: flex; flex-wrap: wrap; gap: 8px 32px; margin-top: 32px; }
 @media (max-width: 767px) {
   .object { grid-template-columns: repeat(6, minmax(0, 1fr)); row-gap: 0; }
-  .object__main { grid-column: 1 / 6; grid-row: 1 / span 2; }
-  .object__sub { grid-column: 3 / 7; margin-top: -64px; }
-  .object__text { grid-column: 1 / -1; margin-top: 56px; }
+  .object__main { grid-column: 1 / 6; grid-row: 1; }
+  .object__sub { grid-column: 3 / 7; grid-row: 2; margin-top: -64px; }
+  .object__text { grid-column: 1 / -1; grid-row: 3; margin-top: 48px; }
 }
 
 .closing { padding-block: var(--space-section); text-align: center; }
